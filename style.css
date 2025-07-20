@@ -1,4 +1,21 @@
-/* Fondo de video */
+/* Reset y ajustes globales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+/* Video de fondo */
 #videoFondo {
   position: fixed;
   top: 0; left: 0;
@@ -9,29 +26,18 @@
   background-color: black;
 }
 
-/* Estilos generales */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding-top: 60px;
-  overflow-x: hidden;
-}
-
-/* Caja de contenido */
+/* Caja del portafolio */
 .caja {
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-  width: 90%;
-  max-width: 350px;
+  max-width: 360px;
+  width: 100%;
   text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 1;
 }
 
 /* Imagen de perfil */
@@ -43,7 +49,7 @@ body {
   border: 3px solid #1a73e8;
 }
 
-/* Texto principal */
+/* Texto */
 article h1,
 article h2,
 article p {
@@ -74,7 +80,7 @@ article p {
   transform: scale(1.05);
 }
 
-/* Responsivo para móviles */
+/* Responsivo en móviles */
 @media (max-width: 480px) {
   .caja {
     padding: 16px;
@@ -82,7 +88,7 @@ article p {
   }
 
   article p {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 
   .botones a {
